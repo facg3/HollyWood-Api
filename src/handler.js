@@ -34,9 +34,14 @@ const frontHandler = (request, response) => {
 
 
 const searchHandler = (request, response) => {
-  // Sum3a and Sultan
+  fs.readFile(path.join(__dirname, '..', '/search'), (error,file)=>{
+    if (error){
+      response.writeHead(500, 'Content-Type:text/html');
+      response.end("<h1>Internal Error</h1>");
+    } else {
+    }
+    });
 }
-
 module.exports = {
   frontHandler,
   searchHandler,
