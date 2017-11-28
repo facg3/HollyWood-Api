@@ -15,7 +15,7 @@ A great (search) word finder always starts with autocomplete. Then when the pers
 
 ## Firstly to use it :
 1. Clone the repo:
-In your terminal type : git clone git@github.com:facg3/HollyWood-Api.git
+In your terminal type : git clone [git@github.com:facg3/HollyWood-Api.git]()
 
 
 
