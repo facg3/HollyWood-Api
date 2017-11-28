@@ -1,16 +1,16 @@
-#Word Finder (autocomplete) project :  
+#  Word Finder (autocomplete) project :  
 
-##who we are :
+## who we are :
 we are HollyWood-Api  team :)  
 1.Ismael
 2.Yasmin
 3.Marwa
 4.Sultan  
 
-##what our project about :
+## what our project about :  
 A great (search) word finder always starts with autocomplete. Then when the person clicks/taps on the word they want the definition for, we show them the definition fast!
 
-#simple explain  about it the project !
+# simple explain  about it the project !
 
 
 ## Firstly to use it :
@@ -18,7 +18,7 @@ A great (search) word finder always starts with autocomplete. Then when the pers
 
 
 
-###Our structure:
+### Our structure:  
 
 1. front  folder (html - css – image – js – test )
 
@@ -26,8 +26,8 @@ A great (search) word finder always starts with autocomplete. Then when the pers
 
 
 
-##How we worked :  
-pair programmer :) and  Mob programming  :)
+## How we worked :     
+pair programming :) and  Mob programming  :)
 
 Part 1:
 Back end :
