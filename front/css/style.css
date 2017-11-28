@@ -27,8 +27,28 @@ body{
 
 .search-container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 40vh;
   width: 100%;
+}
+
+.list{
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+  margin: 2px 2px;
+  font-size: 20px;
+  max-height: 20px;
+}
+.list:hover{
+  background-color: lightgray;
+}
+
+.u-list{
+  border: 1px solid gray;
+  text-align: left;
+  width: 100%;
+  max-width: 60%;
 }
