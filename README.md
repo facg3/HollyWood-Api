@@ -30,11 +30,11 @@ In your terminal type : git clone [git@github.com:facg3/HollyWood-Api.git]()
 ## How we worked :     
 pair programming :) and  Mob programming  :)
 
-Part 1:
-Back end :
-Pair 1 : Marwa & Yasmin  and swapping
-pair 2 : Sultan & Ismail  and swapping
-mob programming
-Part 2:
-Front end :
+Part 1:  
+Back end :  
+Pair 1 : Marwa & Yasmin  and swapping  
+pair 2 : Sultan & Ismail  and swapping  
+mob programming  
+Part 2:  
+Front end :  
 Mob programming
