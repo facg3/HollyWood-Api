@@ -8,8 +8,7 @@ const router = (request, response) => {
   } else if (request.url.startsWith("/front")) {
     handlers.frontHandler(request, response);
   } else if (endpoint === '/search') {
-    // Sum3a and Sultan
-    handlers.searchHandler(request , response);
+    handlers.searchHandler(request, response);
   } else {
     response.writeHead(404,"Content-Type: text/html");
     response.end("<h1>No Files Found</h1>");

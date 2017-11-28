@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const queryString = require('querystring');
 
 const homePageHandler = (request, response)=>{
   fs.readFile(path.join(__dirname, '..', 'front', 'index.html'), (error, file)=>{
@@ -32,16 +33,38 @@ const frontHandler = (request, response) => {
   });
 }
 
+const getResults = (dataArray, allData)=>{
+  var resultsArray = [];
+  dataArray.forEach((item)=>{
+    if(item.startsWith(allData)) resultsArray.push(item)
+  });
+  return resultsArray;
+}
 
 const searchHandler = (request, response) => {
-  fs.readFile(path.join(__dirname, '..', '/search'), (error,file)=>{
+  fs.readFile(path.join(__dirname, '..', 'src', 'stars.json'), 'utf8', (error,file)=>{
     if (error){
       response.writeHead(500, 'Content-Type:text/html');
       response.end("<h1>Internal Error</h1>");
     } else {
+      var allData = "";
+      request.on('data', (data)=>{
+        allData += data;
+      });
+      request.on('end', ()=>{
+        if(!allData) response.end("Type a name")
+        else {
+          var dataArray = JSON.parse(file);
+          var results = getResults(dataArray, allData);
+          console.log(results);
+          response.end(JSON.stringify(results));
+        }
+      });
     }
-    });
+  });
 }
+
+
 module.exports = {
   frontHandler,
   searchHandler,
