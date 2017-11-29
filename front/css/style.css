@@ -5,13 +5,18 @@
 
 body{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-image:linear-gradient(rgba(254 , 60 ,60 , -0.19),rgba(255 , 60 ,60 , 0.81)), url("../img/img.jpeg");
+  background-position: center;
+}
 
-  background-repeat:repeat;
-
+html{
+  background-image: url('../img/download.png');
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .search-box{
@@ -25,43 +30,17 @@ body{
   font-size: 16px;
 }
 
+.home-logo{
+  display: flex;
+  width: 35%;
+}
+
 .search-container{
-  background-image: url('../img/download.png');
-background-position:  50% ;
-background-position: top;
-background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 40vh;
   width: 100%;
 }
 
-.list{
-  list-style: none;
-  text-align: left;
-  padding: 5px;
-  margin: 2px 2px;
-  font-size: 20px;
-  max-height: 20px;
-  background-color: white;
-}
 .list:hover{
   background-color: lightgray;
-}
-
-.u-list{
-  border: 1px solid gray;
-  text-align: left;
-  width: 100%;
-  max-width: 60%;
-}
-.list-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 40vh;
-  width: 100%;
 }
