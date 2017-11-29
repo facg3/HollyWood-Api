@@ -1,8 +1,9 @@
 var ul = document.createElement('ul');
+const container = document.querySelector(".search-container");
 ul.className = "u-list";
+const inputBox = document.querySelector('.search-box');
 
 function onInput() {
-  var inputBox = document.querySelector('.search-box');
   var searchValue = inputBox.value;
   fetch('/search', searchValue, dispalyResult);
   ul.innerHTML = "";
@@ -10,12 +11,15 @@ function onInput() {
 
 
 function dispalyResult(array) {
-  array.forEach(function(i) {
+  array.forEach(function(starName) {
     var li = document.createElement("li");
-    li.innerText = i;
+    li.innerText = starName;
     li.className = "list";
+    li.addEventListener('click', function(){
+      console.log(inputBox);
+      inputBox.value = starName;
+    })
     ul.appendChild(li);
   });
-  const container = document.querySelector(".search-container");
   container.appendChild(ul);
 }
