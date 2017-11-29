@@ -8,12 +8,14 @@ function onInput() {
   var searchValue = inputBox.value;
   fetch('/search', searchValue, dispalyResult);
   if(ulSelector){
-    container.removeChild(ulSelector);
+    ul.innerHTML = "";
+    ul.style.border = "none";
   }
 }
 
 
 function dispalyResult(array) {
+  console.log(array);
   array.forEach(function(starName) {
     var li = document.createElement("li");
     li.innerText = starName;

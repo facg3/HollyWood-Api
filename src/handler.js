@@ -61,7 +61,6 @@ const searchHandler = (request, response) => {
         else {
           var dataArray = JSON.parse(file);
           var results = getResults(dataArray, allData);
-          console.log(results);
           response.end(JSON.stringify(results));
         }
       });
