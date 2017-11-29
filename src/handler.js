@@ -20,7 +20,9 @@ const frontHandler = (request, response) => {
     html : 'text/html',
     css : 'text/css',
     js :'application/javascript',
-    ico : 'image/x-icon'
+    ico : 'image/x-icon',
+    jpg: 'image/jpeg',
+    png: 'image/png'
   };
   fs.readFile(path.join(__dirname, '..', request.url), (error,file)=>{
     if (error){
@@ -36,7 +38,10 @@ const frontHandler = (request, response) => {
 const getResults = (dataArray, allData)=>{
   var resultsArray = [];
   dataArray.forEach((item)=>{
-    if(item.startsWith(allData)) resultsArray.push(item)
+    if(allData.trim()!==""){
+      var searchText = allData.trim();
+      if(item.toUpperCase().startsWith(searchText.toUpperCase())) resultsArray.push(item)
+    }
   });
   return resultsArray;
 }
@@ -52,11 +57,10 @@ const searchHandler = (request, response) => {
         allData += data;
       });
       request.on('end', ()=>{
-        if(!allData) response.end("Type a name")
+        if(!allData) response.end("Empty")
         else {
           var dataArray = JSON.parse(file);
           var results = getResults(dataArray, allData);
-          console.log(results);
           response.end(JSON.stringify(results));
         }
       });

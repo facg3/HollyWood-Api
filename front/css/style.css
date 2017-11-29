@@ -8,6 +8,9 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image:linear-gradient(rgba(254 , 60 ,60 , -0.19),rgba(255 , 60 ,60 , 0.81)), url("../img/img.jpeg");
+
+  background-repeat:repeat;
 
 }
 
@@ -16,9 +19,6 @@ body{
   max-width: 60%;
   min-height: 35px;
   background-color: white;
-  background-image: url('../img/searchicon.png');
-  background-position: right;
-  background-repeat: no-repeat;
   border: 1px solid gray;
   border-radius: 5px;
   text-align: center;
@@ -26,6 +26,10 @@ body{
 }
 
 .search-container{
+  background-image: url('../img/download.png');
+background-position:  50% ;
+background-position: top;
+background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,6 +45,7 @@ body{
   margin: 2px 2px;
   font-size: 20px;
   max-height: 20px;
+  background-color: white;
 }
 .list:hover{
   background-color: lightgray;
