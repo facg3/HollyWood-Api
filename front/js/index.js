@@ -3,8 +3,9 @@ function fetch(url, searchValue, callback){
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4){
       if (xhr.status == 200) {
-        console.log(JSON.parse(xhr.responseText));
-        callback(JSON.parse(xhr.responseText));
+        if(xhr.responseText !== "Empty"){
+          callback(JSON.parse(xhr.responseText));
+        }
       } else {
         alert("Error Occured!!, on: "+url+" with response: "+error);
       }
