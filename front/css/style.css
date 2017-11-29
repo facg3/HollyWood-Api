@@ -52,3 +52,11 @@ body{
   width: 100%;
   max-width: 60%;
 }
+.list-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%;
+}
