@@ -10,7 +10,7 @@ we are HollyWood-Api  team :)
 ## what our project about :  
 A great (search) word finder always starts with autocomplete. Then when the person clicks/taps on the word they want the definition for, we show them the definition fast!
 
-# User Stories!  
+
 
 ## Firstly to use it :
 1. Clone the repo:
@@ -19,8 +19,7 @@ git clone [git@github.com:facg3/HollyWood-Api.git]()
 
 
 2. our Page :(in heroku) [https://hollywoodapp.herokuapp.com/]
- - write the name of your star in the text box.
- - you will say autocomplete  of the names of stars.
+
 
 ### Our structure:  
 
