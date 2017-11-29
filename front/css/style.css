@@ -5,18 +5,13 @@
 
 body{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-image:linear-gradient(rgba(254 , 60 ,60 , -0.19),rgba(255 , 60 ,60 , 0.81)), url("../img/img.jpeg");
-  background-repeat:repeat;
-}
 
-html{
-  background-image: url('../img/download.png');
-  background-position: top;
-  background-repeat: no-repeat;
+  background-repeat:repeat;
+
 }
 
 .search-box{
@@ -28,16 +23,16 @@ html{
   border-radius: 5px;
   text-align: center;
   font-size: 16px;
-  position: absolute;
-  top: 50%;
 }
 
-.home-logo{
-  display: flex;
-}
 .search-container{
+  background-image: url('../img/download.png');
+background-position:  50% ;
+background-position: top;
+background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   min-height: 40vh;
   width: 100%;
@@ -47,6 +42,7 @@ html{
   list-style: none;
   text-align: left;
   padding: 5px;
+  margin: 2px 2px;
   font-size: 20px;
   max-height: 20px;
   background-color: white;
@@ -56,9 +52,8 @@ html{
 }
 
 .u-list{
+  border: 1px solid gray;
   text-align: left;
   width: 100%;
   max-width: 60%;
-  position: absolute;
-  top: 56%;
 }
