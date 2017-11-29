@@ -1,7 +1,7 @@
 #  Word Finder (autocomplete) project :  
 
 ## who we are :
-we are HollyWood-Api  team :smile: 
+we are HollyWood-Api  team :smiley:  
 1.[Ismail](https://github.com/ismail2009)
 
 2.[Yasmin](https://github.com/yasminhillis)
