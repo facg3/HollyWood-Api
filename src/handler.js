@@ -20,7 +20,9 @@ const frontHandler = (request, response) => {
     html : 'text/html',
     css : 'text/css',
     js :'application/javascript',
-    ico : 'image/x-icon'
+    ico : 'image/x-icon',
+    jpg: 'image/jpeg',
+    png: 'image/png'
   };
   fs.readFile(path.join(__dirname, '..', request.url), (error,file)=>{
     if (error){
@@ -36,7 +38,10 @@ const frontHandler = (request, response) => {
 const getResults = (dataArray, allData)=>{
   var resultsArray = [];
   dataArray.forEach((item)=>{
-    if(item.startsWith(allData)) resultsArray.push(item)
+    if(allData.trim()!==""){
+      var searchText = allData.trim();
+      if(item.toUpperCase().startsWith(searchText.toUpperCase())) resultsArray.push(item)
+    }
   });
   return resultsArray;
 }
