@@ -35,6 +35,7 @@ html{
 .home-logo{
   display: flex;
 }
+
 .search-container{
   display: flex;
   flex-direction: column;
