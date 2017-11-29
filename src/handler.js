@@ -57,7 +57,7 @@ const searchHandler = (request, response) => {
         allData += data;
       });
       request.on('end', ()=>{
-        if(!allData) response.end("Type a name")
+        if(!allData) response.end("Empty")
         else {
           var dataArray = JSON.parse(file);
           var results = getResults(dataArray, allData);
