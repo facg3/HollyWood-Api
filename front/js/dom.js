@@ -16,11 +16,13 @@ function onInput() {
 
 
 function dispalyResult(array) {
-  array.forEach(function(starName) {
-    var option = document.createElement("option");
-    option.innerText = starName;
-    option.className = "list";
-    list.appendChild(option);
+  array.forEach(function(starName, index) {
+    if(index<10){
+      var option = document.createElement("option");
+      option.innerText = starName;
+      option.className = "list";
+      list.appendChild(option);
+    }
   });
   inputBox.appendChild(list);
 }
