@@ -15,7 +15,6 @@ function onInput() {
 
 
 function dispalyResult(array) {
-  console.log(array);
   array.forEach(function(starName) {
     var li = document.createElement("li");
     li.innerText = starName;
