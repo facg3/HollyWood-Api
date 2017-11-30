@@ -7,15 +7,16 @@ list.id = "result-list"
 
 function onInput() {
   const listSelector = document.querySelector(".u-list");
-  var searchValue = inputBox.value;
-  fetch('/search', searchValue, dispalyResult);
-  if(listSelector){
+  var searchValue = inputBox.value.trim();
+  inputBox.value = searchValue;
+  if (searchValue)
+    fetch('/search', searchValue, displayResult);
+  if(listSelector)
     list.innerHTML = "";
-  }
 }
 
 
-function dispalyResult(array) {
+function displayResult(array) {
   array.forEach(function(starName, index) {
     if(index<10){
       var option = document.createElement("option");
