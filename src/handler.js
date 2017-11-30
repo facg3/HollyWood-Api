@@ -38,9 +38,9 @@ const frontHandler = (request, response) => {
 const getResults = (dataArray, allData)=>{
   var resultsArray = [];
   dataArray.forEach((item, index)=>{
-    if(index < 10){
+    if(resultsArray.length<10){
       if(item.toUpperCase().startsWith(allData.toUpperCase())){
-        resultsArray.push(item)
+          resultsArray.push(item)
       }
     }
   });
@@ -62,7 +62,6 @@ const searchHandler = (request, response) => {
           response.end("<h1>Internal Error</h1>");
         } else {
           var dataArray = JSON.parse(file);
-          console.log('after: '+ allData);
           var results = getResults(dataArray, allData);
           response.end(JSON.stringify(results));
         }
