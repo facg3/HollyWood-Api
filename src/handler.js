@@ -35,11 +35,11 @@ const frontHandler = (request, response) => {
   });
 }
 
-const getResults = (dataArray, allData)=>{
+const getResults = (data, input)=>{
   var resultsArray = [];
-  dataArray.forEach((item)=>{
-    if(allData.trim()!==""){
-      var searchText = allData.trim();
+  data.forEach((item)=>{
+    if(input.trim()!==""){
+      var searchText = input.trim();
       if(item.toUpperCase().startsWith(searchText.toUpperCase())) resultsArray.push(item)
     }
   });
@@ -72,5 +72,6 @@ const searchHandler = (request, response) => {
 module.exports = {
   frontHandler,
   searchHandler,
+  getResults,
   homePageHandler
 }
