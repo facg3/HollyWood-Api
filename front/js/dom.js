@@ -9,7 +9,7 @@ function onInput() {
   const listSelector = document.querySelector(".u-list");
   var searchValue = inputBox.value.trim();
   inputBox.value = searchValue;
-  if (searchValue)
+  if(searchValue)
     fetch('/search', searchValue, displayResult);
   if(listSelector)
     list.innerHTML = "";
@@ -17,13 +17,11 @@ function onInput() {
 
 
 function displayResult(array) {
-  array.forEach(function(starName, index) {
-    if(index<10){
+  array.forEach(function(starName) {
       var option = document.createElement("option");
       option.innerText = starName;
       option.className = "list";
       list.appendChild(option);
-    }
   });
   inputBox.appendChild(list);
 }

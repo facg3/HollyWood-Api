@@ -37,9 +37,12 @@ const frontHandler = (request, response) => {
 
 const getResults = (dataArray, allData)=>{
   var resultsArray = [];
-  dataArray.forEach((item)=>{
-    if(item.toUpperCase().startsWith(allData.toUpperCase()))
-      resultsArray.push(item)
+  dataArray.forEach((item, index)=>{
+    if(index < 10){
+      if(item.toUpperCase().startsWith(allData.toUpperCase())){
+        resultsArray.push(item)
+      }
+    }
   });
   return resultsArray;
 }
