@@ -9,7 +9,7 @@ function onInput() {
   const listSelector = document.querySelector(".u-list");
   var searchValue = inputBox.value.trim();
   inputBox.value = searchValue;
-  if(searchValue)
+  if (searchValue)
     fetch('/search', searchValue, displayResult);
   if(listSelector)
     list.innerHTML = "";
@@ -17,11 +17,20 @@ function onInput() {
 
 
 function displayResult(array) {
-  array.forEach(function(starName) {
+  // console.log(array.length);
+  // if(array.length == 0) {
+  //   var option = document.createElement("option");
+  //   option.innerText = "Hmmm, still searching, found nothing!";
+  //   option.className = "list";
+  //   list.innerHTML= 'qqqq';
+  // } 
+  else {
+    array.forEach(function(starName, index) {
       var option = document.createElement("option");
       option.innerText = starName;
       option.className = "list";
       list.appendChild(option);
-  });
+    });
+  }
   inputBox.appendChild(list);
 }
