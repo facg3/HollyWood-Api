@@ -35,44 +35,43 @@ const frontHandler = (request, response) => {
   });
 }
 
-const getResults = (dataArray, allData)=>{
+const getResults = (data, input)=>{
   var resultsArray = [];
-  dataArray.forEach((item)=>{
-    if(item.toUpperCase().startsWith(allData.toUpperCase()))
-      resultsArray.push(item)
+  data.forEach((item)=>{
+    if(input.trim()!==""){
+      var searchText = input.trim();
+      if(item.toUpperCase().startsWith(searchText.toUpperCase())) resultsArray.push(item)
+    }
   });
   return resultsArray;
 }
 
 const searchHandler = (request, response) => {
-  let allData = "";
-  request.on('data', (data)=>{
-    allData += data;
-  });
-  request.on('end', ()=>{
-    if(!allData)
-      response.end("Empty");
-    else {
-      fs.readFile(path.join(__dirname, '..', 'src', 'stars.json'), 'utf8', (error,file)=>{
-        if (error){
-          response.writeHead(500, 'Content-Type:text/html');
-          response.end("<h1>Internal Error</h1>");
-        } else {
+  fs.readFile(path.join(__dirname, '..', 'src', 'stars.json'), 'utf8', (error,file)=>{
+    if (error){
+      response.writeHead(500, 'Content-Type:text/html');
+      response.end("<h1>Internal Error</h1>");
+    } else {
+      var allData = "";
+      request.on('data', (data)=>{
+        allData += data;
+      });
+      request.on('end', ()=>{
+        if(!allData) response.end("Empty")
+        else {
           var dataArray = JSON.parse(file);
-          console.log('after: '+ allData);
           var results = getResults(dataArray, allData);
           response.end(JSON.stringify(results));
         }
       });
-
     }
   });
-
 }
 
 
 module.exports = {
   frontHandler,
   searchHandler,
+  getResults,
   homePageHandler
 }
