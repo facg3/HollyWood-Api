@@ -14,12 +14,31 @@ we are HollyWood-Api  team :smiley:
 A great (search) word finder about the stars of hollywood always starts with autocomplete. Then when the person clicks/taps on the stars they want the definition for, we show them the definition fast!
 
 
-## Firstly to use it :
-1. Clone the repo:
-In your terminal type :   
-git clone for SSH [git@github.com:facg3/HollyWood-Api.git]  
+## Firstly to use it :  
+Run this project on your Local Machine
 
-2. our Page :[in heroku](https://hollywoodapp.herokuapp.com/)
+1. our Page :[in heroku](https://hollywoodapp.herokuapp.com/)  
+
+2. Clone the repo:
+
+```sh
+git clone git@github.com:facg3/HollyWood-Api.git && cd autocomplete
+```
+
+3.Install the node.js devDependencies:
+
+```sh
+npm install
+```
+
+4. Run the (module) Tests 
+```sh
+npm test
+```
+- Run the Server with Nodemon 
+```sh
+npm run nodemon
+```
 
 
 ### Our structure:  
