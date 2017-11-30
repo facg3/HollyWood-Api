@@ -4,9 +4,8 @@
   "description": "An open-source api that retrives data about hollywood stars upon customized search.",
   "main": "index.js",
   "scripts": {
-    "test": "tape",
-    "start": "node src/server.js",
-    "startnodemon": "nodemon src/server.js"
+    "test": "tape src/tests/test.js",
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +19,5 @@
   "homepage": "https://github.com/facg3/HollyWood-Api#readme",
   "devDependencies": {
     "tape": "^4.8.0"
-  },
-  "dependencies": {
-    "nodemon": "^1.12.1"
   }
 }
