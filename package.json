@@ -4,7 +4,7 @@
   "description": "An open-source api that retrives data about hollywood stars upon customized search.",
   "main": "index.js",
   "scripts": {
-    "test": "tape",
+    "test": "tape src/tests/test.js",
     "start": "node src/server.js"
   },
   "repository": {
